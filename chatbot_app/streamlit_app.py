@@ -5,7 +5,7 @@ from streamlit_chat import message
 
 from PIL import Image
 
-image = Image.open('static/sunrise.avif')
+image = Image.open('sunrise.avif')
 
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
