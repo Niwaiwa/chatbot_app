@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "chatbot-app"
+version = "0.1.0"
+description = ""
+authors = ["Niwaiwa <po2846@gmail.com>"]
+readme = "README.md"
+packages = [{include = "chatbot_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.20.0"
+openai = "^0.27.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
