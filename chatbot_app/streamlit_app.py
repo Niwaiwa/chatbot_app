@@ -3,6 +3,10 @@ import openai
 import streamlit as st
 from streamlit_chat import message
 
+from PIL import Image
+
+image = Image.open('static/sunrise.avif')
+
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 if 'prompts' not in st.session_state:
@@ -38,7 +42,7 @@ def chat_click():
         st.session_state['prompts'].append({"role": "assistant", "content": output})
         st.session_state['user'] = ""
 
-st.image("{Your logo}", width=80)
+st.image(image, width=80)
 st.title("My ChatBot")
 
 user_input=st.text_input("You:", key="user")
