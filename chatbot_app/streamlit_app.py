@@ -5,7 +5,7 @@ from streamlit_chat import message
 
 from PIL import Image
 
-image = Image.open('/app/chatbot_app/sora.jpg')
+image  = Image.new( mode = "RGB", size = (80, 80), color = (209, 123, 193) )
 
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
